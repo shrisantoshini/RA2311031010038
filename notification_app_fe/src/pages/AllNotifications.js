@@ -37,7 +37,7 @@ function AllNotifications() {
       Log("frontend", "info", "component", `Loaded ${ids.length} notifications successfully`);
     } catch (err) {
       Log("frontend", "error", "page", "Failed to load notifications: " + err.message);
-      setError("Could not load notifications. Check your connection.");
+      setError(err.message || "Could not load notifications. Check your connection.");
     } finally {
       setLoading(false);
     }

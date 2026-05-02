@@ -26,6 +26,9 @@ export async function fetchNotifications(token, params = {}) {
       headers: { Authorization: `Bearer ${token}` },
     }
   );
-  if (!res.ok) throw new Error("Failed to fetch notifications");
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Failed to fetch notifications (${res.status}): ${text}`);
+  }
   return res.json();
 }
