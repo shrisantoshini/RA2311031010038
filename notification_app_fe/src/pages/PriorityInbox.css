@@ -1,0 +1,103 @@
+.priority-controls {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+  border: 1px solid #bfdbfe;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.08);
+}
+
+.priority-controls label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1e3a8a;
+}
+
+.priority-controls input {
+  padding: 0.6rem;
+  border: 2px solid #93c5fd;
+  border-radius: 8px;
+  width: 80px;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  color: #1e3a8a;
+  outline: none;
+  font-weight: bold;
+  background: white;
+  transition: all 0.2s;
+}
+
+.priority-controls input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+.priority-note {
+  margin: 0.8rem 0 0 0;
+  color: #2563eb;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.priority-item {
+  display: flex;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  overflow: hidden;
+  align-items: stretch;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: slideIn 0.4s ease-out backwards;
+}
+
+.priority-item:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Stagger animations for list items */
+.priority-item:nth-child(1) { animation-delay: 0.05s; }
+.priority-item:nth-child(2) { animation-delay: 0.1s; }
+.priority-item:nth-child(3) { animation-delay: 0.15s; }
+.priority-item:nth-child(4) { animation-delay: 0.2s; }
+.priority-item:nth-child(5) { animation-delay: 0.25s; }
+
+.priority-rank {
+  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  color: white;
+  font-weight: 800;
+  font-size: 1.6rem;
+  padding: 0 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+}
+
+.priority-item .notification-card {
+  flex: 1;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0;
+  margin: 0;
+  padding: 1.8rem;
+  background: transparent !important;
+}
+
+.priority-item .notification-card.is-new {
+  background: #f8fafc !important;
+}
+
+.priority-item .new-indicator {
+  top: 20px;
+  right: 20px;
+}

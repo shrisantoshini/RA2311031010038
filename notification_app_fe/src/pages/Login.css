@@ -1,0 +1,113 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  font-family: 'Outfit', sans-serif;
+  color: white;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 420px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.login-box h2 {
+  margin: 0 0 0.5rem;
+  text-align: center;
+  font-size: 2rem;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-box input {
+  padding: 1rem 1.2rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-size: 1rem;
+  color: white;
+  outline: none;
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.login-box input::placeholder {
+  color: #64748b;
+}
+
+.login-box input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.15);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.login-box button {
+  padding: 1rem 1.2rem;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.login-box button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+}
+
+.login-box button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.login-box button:disabled {
+  background: #475569;
+  cursor: not-allowed;
+  box-shadow: none;
+  color: #94a3b8;
+}
+
+.error {
+  color: #f87171;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 0;
+  background: rgba(248, 113, 113, 0.1);
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(248, 113, 113, 0.2);
+}
